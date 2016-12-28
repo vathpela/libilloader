@@ -1,0 +1,10 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=@@LIBDIR@@
+includedir=/usr/include
+
+Name: libilloader
+Description: probably a pretty bad idea
+Version: @@VERSION@@
+Libs: -L${libdir} -lilloader
+Cflags: -I${includedir}/libilloader

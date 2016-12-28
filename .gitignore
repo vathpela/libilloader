@@ -31,3 +31,15 @@
 # Debug files
 *.dSYM/
 *.su
+
+# RPM spec files
+*.spec
+
+# build deps
+.*.d
+
+# pkgconfig files
+*.pc
+
+# library test intermediate file
+symbols
