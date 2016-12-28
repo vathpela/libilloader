@@ -18,27 +18,13 @@
 
 #include <errno.h>
 #include <stdio.h>
+#include <string.h>
+#include <sys/param.h>
 
-#include "config.h"
-
-#include "include/libilloader/libilloader.h"
-
-int
-llnew_arena(size_t size UNUSED)
-{
-	errno = ENOSYS;
-	return -1;
-}
-
-int
-lladd_arena(void *base UNUSED, size_t size UNUSED)
-{
-	errno = ENOSYS;
-	return -1;
-}
+#include "libilloader.h"
 
 void *
-llopen(const char *filename UNUSED, int flags UNUSED)
+llopen(const char *filename UNUSED, int flags UNUSED, int arena_map UNUSED)
 {
 	errno = ENOSYS;
 	return NULL;

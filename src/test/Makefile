@@ -17,7 +17,8 @@ clean :
 test : tester
 	./tester
 
-tester :: tester.o
+tester : | ../arena.c
+tester : tester.o
 	$(CC) $(cflags) $(LDFLAGS) -Wl,-rpath,$(TOPDIR)/src -L$(TOPDIR)/src -o $@ $^ -lilloader
 
 .PHONY: all clean install test

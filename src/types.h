@@ -15,13 +15,9 @@
  * You should have received a copy of the GNU General Public License along
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef LIBILLOADER_H
-#define LIBILLOADER_H 1
+#ifndef LLTYPES_H_
+#define LLTYPES_H_ 1
 
-#include "config.h"
+typedef ssize_t (*section_matcher)(const char *name, ssize_t n);
 
-extern int llnew_arena(void) EXPORT;
-
-extern void *llopen(const char *filename, int flags, int arena_map) EXPORT;
-
-#endif /* LIBILLOADER_H */
+#endif /* LLTYPES_H_ */

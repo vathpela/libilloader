@@ -15,13 +15,15 @@
  * You should have received a copy of the GNU General Public License along
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef LIBILLOADER_H
-#define LIBILLOADER_H 1
+#ifndef LLLIBILLOADER_H_
+#define LLLIBILLOADER_H_ 1
 
-#include "config.h"
+#include "include/libilloader/libilloader.h"
 
-extern int llnew_arena(void) EXPORT;
+#include "list.h"
+#include "util.h"
+#include "types.h"
 
-extern void *llopen(const char *filename, int flags, int arena_map) EXPORT;
+extern struct list_head arenae;
 
-#endif /* LIBILLOADER_H */
+#endif /* LLLIBILLOADER_H_ */
