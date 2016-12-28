@@ -18,7 +18,11 @@
 #ifndef LIBILLOADER_H
 #define LIBILLOADER_H 1
 
-extern void *
-llopen(const char *filename, int flags) EXPORT;
+#include "config.h"
+
+extern int llnew_arena(size_t size) EXPORT;
+extern int lladd_arena(void *base, size_t size) EXPORT;
+
+extern void *llopen(const char *filename, int flags) EXPORT;
 
 #endif /* LIBILLOADER_H */

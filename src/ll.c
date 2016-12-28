@@ -16,14 +16,30 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <errno.h>
 #include <stdio.h>
 
 #include "config.h"
 
 #include "include/libilloader/libilloader.h"
 
+int
+llnew_arena(size_t size UNUSED)
+{
+	errno = ENOSYS;
+	return -1;
+}
+
+int
+lladd_arena(void *base UNUSED, size_t size UNUSED)
+{
+	errno = ENOSYS;
+	return -1;
+}
+
 void *
 llopen(const char *filename UNUSED, int flags UNUSED)
 {
+	errno = ENOSYS;
 	return NULL;
 }
